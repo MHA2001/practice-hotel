@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		/>
 		<link rel="stylesheet" href="CSS/style.css" />
 		<link rel="stylesheet" href="CSS/index.css" />
 		<title>Hotel BT | Welcome</title>
@@ -14,7 +18,7 @@
 				<nav>
 					<ul class="split | bg-dark">
 						<!--Todo: add "date-" attribute  -->
-						<li><a href="index.html">Home</a></li>
+						<li><a data-active="" href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
 						<li><a href="contact.html">contact</a></li>
 					</ul>
@@ -34,8 +38,8 @@
 				</div>
 			</section>
 
-			<section id="#about-section" class="bg-dark">
-				<div class="split-evenly">
+			<section id="about-section" class="bg-dark">
+				<div class="split split-evenly">
 					<div class="bg-url"></div>
 					<div class="flow">
 						<h2><span class="text-accent">The History</span> Of Our Hotel</h2>
@@ -52,24 +56,33 @@
 			</section>
 
 			<section id="#benifit-cards">
-				<div class="split-evenly">
+				<div class="split split-evenly">
 					<!--Todo: use Font Awesome icons  -->
 					<div class="card flow">
-						<h3>greet location</h3>
+						<header>
+							<i class="fa-solid fa-hotel fa-3x"></i>
+							<h3>greet location</h3>
+						</header>
+						<p>
+							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
+							omnis?
+						</p>
+					</div>
+					<div class="card flow | bg-accent">
+						<header>
+							<i class="fa-solid fa-utensils fa-3x"></i>
+							<h3>Free Meals</h3>
+						</header>
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
 							omnis?
 						</p>
 					</div>
 					<div class="card flow">
-						<h3>Free Meals</h3>
-						<p>
-							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
-							omnis?
-						</p>
-					</div>
-					<div class="card flow">
-						<h3>Fitness Room</h3>
+						<header>
+							<i class="fa-solid fa-dumbbell fa-3x"></i>
+							<h3>Fitness Room</h3>
+						</header>
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
 							omnis?
