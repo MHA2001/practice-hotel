@@ -4,24 +4,27 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="CSS/style.css" />
+		<link rel="stylesheet" href="CSS/index.css" />
 		<title>Hotel BT | Welcome</title>
 	</head>
 	<body>
-		<header class="flex container">
-			<div id="logo"><p>hbt</p></div>
-			<nav>
-				<ul class="flex | bg-dark">
-					<!--Todo: add "date-" attribute  -->
-					<li><a href="index.html">Home</a></li>
-					<li><a href="about.html">About</a></li>
-					<li><a href="contact.html">contact</a></li>
-				</ul>
-			</nav>
+		<header class="primary-header | bg-dark">
+			<div class="split container">
+				<div id="logo"><p>hbt</p></div>
+				<nav>
+					<ul class="split | bg-dark">
+						<!--Todo: add "date-" attribute  -->
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+			</div>
 		</header>
 
 		<main>
-			<section id="hero" class="flow | bg-dark">
-				<div class="contianer">
+			<section id="hero" class="bg-dark bg-url">
+				<div class="flow contianer">
 					<h1><span class="text-accent">Enjoy</span> Your Stay</h1>
 					<p>
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
@@ -31,12 +34,12 @@
 				</div>
 			</section>
 
-			<section id="#about-section | bg-dark">
-				<div class="flex">
+			<section id="#about-section" class="bg-dark">
+				<div class="split-evenly">
 					<div class="bg-url"></div>
-					<div>
-						<h2><span class="text-accent">The History</span>Of Our Hotel</h2>
-						<p>
+					<div class="flow">
+						<h2><span class="text-accent">The History</span> Of Our Hotel</h2>
+						<p class="container">
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
 							Assumenda aliquam dolor alias iste autem, quaerat magni unde
 							accusantium qui fuga placeat quidem quo pariatur, voluptatum, ea
@@ -49,23 +52,23 @@
 			</section>
 
 			<section id="#benifit-cards">
-				<div class="flex">
+				<div class="split-evenly">
 					<!--Todo: use Font Awesome icons  -->
-					<div class="card">
+					<div class="card flow">
 						<h3>greet location</h3>
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
 							omnis?
 						</p>
 					</div>
-					<div class="card">
+					<div class="card flow">
 						<h3>Free Meals</h3>
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
 							omnis?
 						</p>
 					</div>
-					<div class="card">
+					<div class="card flow">
 						<h3>Fitness Room</h3>
 						<p>
 							Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut,
@@ -75,7 +78,7 @@
 				</div>
 			</section>
 		</main>
-		<footer>
+		<footer class="bg-dark">
 			<div id="copy">
 				<p>Hotel BT © 2019, All RIghts Reserved</p>
 			</div>
