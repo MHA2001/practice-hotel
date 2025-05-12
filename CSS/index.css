@@ -20,6 +20,7 @@ h1 + p {
 	background-color: var(--bg-clr);
 }
 
+/* have image in both mobile and desktop view */
 #about-section .bg-url {
 	--url: url('../img/photo-1.jpg');
 	flex-basis: 100%;
@@ -28,4 +29,8 @@ h1 + p {
 #about-section .flow {
 	align-self: center;
 	flex-basis: 100%;
+}
+
+#benefit-cards .card {
+	width: 100%;
 }

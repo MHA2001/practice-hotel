@@ -16,10 +16,11 @@
 	--fw-normal: 400;
 	--fw-bold: 700;
 
-	--gap: none;
+	/* --gap: none;
+	--flow-space: none;
 	--url: none;
 	--bg-clr: none;
-	--fg-clr: none;
+	--fg-clr: none; */
 }
 
 /* Reset */
@@ -91,6 +92,7 @@ a {
 }
 
 body {
+	min-height: 100vh;
 	font-family: var(--ff);
 	font-size: var(--fs-400);
 	font-weight: var(--fw-normal);
@@ -110,12 +112,9 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-.split > * {
-	width: 100%;
-}
 
 .flow > * + * {
-	margin-top: 1.875rem;
+	margin-top: var(--flow-space, 1.875rem);
 }
 
 .section-padding {
@@ -191,8 +190,7 @@ nav a:hover {
 }
 /* card */
 .card {
-	padding: 4rem 2rem;
-	width: 100%;
+	padding: 3.125rem;
 }
 .card h3 {
 	font-size: var(--fs-600);

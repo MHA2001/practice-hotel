@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		/>
+		<link rel="stylesheet" href="CSS/style.css" />
+		<link rel="stylesheet" href="CSS/contact.css" />
+		<title>Hotel BT | Welcome</title>
+	</head>
+	<body>
+		<header class="primary-header | bg-dark">
+			<div class="split container">
+				<div id="logo"><p>hbt</p></div>
+				<nav>
+					<ul class="split | bg-dark">
+						<!--Todo: add "date-" attribute  -->
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a data-active="" href="contact.html">contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section id="contact-form" class="container flow section-padding">
+				<h1><span class="text-accent">Contact </span>Us BT</h1>
+				<form action="" class="flow">
+					<p>Please fill out the form below to contact us</p>
+					<div>
+						<label for="name">Name</label>
+						<input type="text" id="name" />
+					</div>
+					<div>
+						<label for="email">Email</label>
+						<input type="email" id="email" />
+					</div>
+					<div>
+						<label for="message">Message</label>
+						<!-- using textarea -->
+						<textarea col="100" , rows="10"></textarea>
+					</div>
+					<button class="btn bg-light">Submit</button>
+				</form>
+			</section>
+			<section id="contact-cards" class="bg-dark">
+				<div class="split">
+					<!--Todo: use Font Awesome icons  -->
+					<div class="card flow">
+						<header>
+							<i class="fa-solid fa-hotel fa-3x"></i>
+							<h3>location</h3>
+						</header>
+						<p>50 Main st, Boston MA</p>
+					</div>
+					<div class="card flow">
+						<header>
+							<i class="fa-solid fa-phone fa-3x"></i>
+							<h3>Phone Number</h3>
+						</header>
+						<p>(617) 555-5555</p>
+					</div>
+					<div class="card flow">
+						<header>
+							<i class="fa-solid fa-envelope fa-3x"></i>
+							<h3>Email Address</h3>
+						</header>
+						<p>frontdesk@hotelbt.co</p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="bg-dark">
+			<div id="copy">
+				<p>Hotel BT © 2019, All RIghts Reserved</p>
+			</div>
+		</footer>
+	</body>
+</html>

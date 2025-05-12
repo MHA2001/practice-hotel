@@ -1,0 +1,38 @@
+h1 {
+	font-size: var(--fs-800);
+}
+
+label,
+input,
+textarea {
+	display: block;
+	width: 100%;
+}
+
+#contact-form {
+	--padding: 3rem;
+}
+
+#contact-form form {
+	--flow-space: 1rem;
+	text-align: left;
+}
+
+#contact-form input,
+#contact-form textarea {
+	padding: 0.3rem;
+	border: 1px solid #44444452;
+	margin-top: 0.5rem;
+}
+
+/* Change the color in focused input box */
+#contact-form input:focus-visible,
+#contact-form textarea:focus-visible {
+	border: none;
+	border-color: var(--clr-accent);
+}
+
+#contact-cards .split {
+	justify-content: center;
+	/* gap: 5rem; */
+}

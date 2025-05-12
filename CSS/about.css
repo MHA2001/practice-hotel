@@ -1,3 +1,4 @@
+/* adding media query to have h1 left align on desktop version */
 h1,
 h2 {
 	font-size: var(--fs-800);
