@@ -110,9 +110,19 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+.split > * {
+	width: 100%;
+}
 
 .flow > * + * {
 	margin-top: 1.875rem;
+}
+
+.section-padding {
+	padding-top: var(--padding, 4rem);
+	padding-bottom: var(--padding, 8rem);
+	padding-right: 1.5rem;
+	padding-left: 1.5rem;
 }
 
 /* Utilities */
