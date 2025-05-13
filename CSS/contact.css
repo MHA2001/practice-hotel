@@ -20,19 +20,26 @@ textarea {
 
 #contact-form input,
 #contact-form textarea {
-	padding: 0.3rem;
+	padding: 0.3em;
 	border: 1px solid #44444452;
 	margin-top: 0.5rem;
+	border-radius: 3px;
+	resize: none;
 }
 
-/* Change the color in focused input box */
-#contact-form input:focus-visible,
-#contact-form textarea:focus-visible {
-	border: none;
+#contact-form input:focus,
+#contact-form textarea:focus {
+	outline: none;
 	border-color: var(--clr-accent);
 }
 
 #contact-cards .split {
 	justify-content: center;
 	/* gap: 5rem; */
+}
+
+@media (min-width: 45rem) {
+	h1 {
+		text-align: left;
+	}
 }
