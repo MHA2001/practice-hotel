@@ -15,11 +15,22 @@ h2 {
 #intro .split {
 	gap: 3rem;
 }
+
+#intro .flow {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 60%;
+}
+
 /* Image doesn't have same size in chrome and Firefox  */
+#intro .img-container {
+	flex-basis: 40%;
+	flex-grow: 0;
+	flex-shrink: 0;
+	align-self: center;
+}
 #intro img {
 	border-radius: 5px;
-	width: 70%;
-	align-self: center;
 }
 
 #testimonials {
