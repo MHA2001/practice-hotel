@@ -205,6 +205,7 @@ footer.bg-dark {
 }
 /* button */
 .btn {
+	border: none;
 	display: inline-block;
 	color: var(--bg-clr);
 	background-color: var(--fg-clr);

@@ -44,7 +44,7 @@ Before coding, I reviewed the design to identify layout structures and style pat
 - `bg-dark`:  
   - section: white text on black background  
   - Button: black text on white background  
-- `background-img`: Used for three different background images with similar properties; only the URL differs (leveraging CSS variables)
+- `bg-url-`: Used for three different background images with similar properties; only the URL differs (leveraging CSS variables)
 
 **Layout Classes:**
 
@@ -53,9 +53,9 @@ Before coding, I reviewed the design to identify layout structures and style pat
   - Adds `gap` using `var(--gap, 0)`  
   - Makes it easier to handle responsive column layout with a single media query  
 
-- `split-evenly`:  
-  - Used for cards and the about section  
-  - Applies `flex-grow` to all children for even distribution  
+- `container`:  
+  - Used for giving text margin and centralize content.  
+  
 
 - `flow > * + *`:  
   - Adds a 30px gap between sibling elements  
@@ -67,41 +67,48 @@ Before coding, I reviewed the design to identify layout structures and style pat
 This project is part of the **Traversy Media HTML & CSS Course**.
 
 ### ⚙️ Planning & Setup
-- Folder structure
-- Tools, frameworks, or libraries chosen
-- Dev environment setup
+
+**Folder structure**:
+  * **CSS/:** This folder houses the Cascading Style Sheets files, which are used to control the visual presentation and styling of the HTML content.
+    * `about.css`: Styles specific to the "about.html" page.
+    * `contact.css`: Styles specific to the "contact.html" page.
+    * `index.css`: Styles specific to the main "index.html" page.
+    * `style.css`: Likely contains global or shared styles used across multiple pages.
+  * **docs/:** This directory is intended for documentation related to the website or project.
+  * **img/:** This folder stores image assets used on the website.
+  * **about.html:** 
+  * **contact.html:**
+  * **index.html:** 
+  * **README.md:** 
 
 ### 🧑‍💻 Development Process
-- HTML structure creation
-- Styling components
-- Interactivity and JavaScript
-- Responsive design handling
-- Deployment process
-
----
-
-## 🔍 Decoding Concepts (Explain Your Decisions)
-
-A space to explain your technical decisions:
-- Why certain layout techniques were used
-- Component structure rationale
-- CSS/JS/Framework choices
-- Trade-offs and alternatives considered
+- Initial Setup and Core Structure
+- Homepage Completion and Responsiveness
+- About Page Development
+- Contact Page Development
+- Refactoring and fixing bugs
 
 ---
 
 ## 🧱 Problems & Solutions
 
-### Problem #1
-**Issue:**  
-**Cause (if known):**  
-**Solution:**  
-**Lesson Learned:**
+### Problem #1: Image Disappears When Flex Direction Changes to Column
 
-### Problem #2
-...
+**Issue:** I was attempting to create a two-column layout with equal width, where one column contained text and the other displayed an image. The image, implemented as a `background-image` on a `div`, disappeared when the flex direction of the container was changed from `row` to `column`.
 
----
+**Cause:** The issue arises from how flexbox handles sizing and the nature of using a `background-image`. When the flex direction is set to `column`, the main axis becomes vertical. Flexbox tries to shrink flex items as much as possible along this main axis. Since the `div` containing the `background-image` had no intrinsic content, flexbox considered it the least important element and effectively collapsed its height to zero. Consequently, with no height on the `div`, the `background-image` became invisible. Furthermore, the height of the flex container in a column layout is determined by the height of its children. An empty `div` contributes no inherent height to the container.
+
+**Solution:** The solution was to explicitly set a height on the flex container. This provided a defined space along the main axis (vertical in this case), allowing the `div` with the `background-image` to occupy that space and the image to become visible.
+
+
+### Problem #2: Inconsistent Width Rendering of `<img/>` in Flex Layout Across Browsers
+
+**Issue:** I implemented a two-column flex layout where one column contained text and the other displayed an image using the `<img/>` tag. I attempted to set the width of the text column to 60% and the image column to 35%. However, I observed significant rendering differences between Firefox and Chrome.
+
+**Cause:** The discrepancy in rendering is likely due to subtle variations in how different browsers, specifically Firefox and Chrome, handle the `width` property applied directly to `<img/>` elements that are also flex items. These browsers might have slightly different interpretations of how the intrinsic dimensions of the image interact with the flexbox layout and the specified percentage widths.
+
+**Solution:** The solution that provided a consistent look across both browsers was to wrap the `<img/>` tag within a container `div`. By applying the flex-basis to this container `div` instead of directly to the `<img/>` tag, the image then scales within its container in a more predictable and consistent manner across different browsers.
+
 
 ## 💡 Things I’d Do Differently
 
@@ -112,21 +119,4 @@ Reflections on what could be improved:
 
 ---
 
-## 📚 Resources & Notes
-
-- [Helpful article or doc #1](#)
-- [Helpful article or doc #2](#)
-- Notes or definitions of key concepts
-
----
-
-## 🚀 Final Result
-
-- **Live Demo:** [Link Here]
-- **Screenshots:**  
-  ![Screenshot](path/to/screenshot.png)
-
-- **Source Code:** [GitHub Repository](#)
-
----
 
